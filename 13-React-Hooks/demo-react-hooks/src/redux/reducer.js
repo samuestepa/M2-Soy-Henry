@@ -1,4 +1,4 @@
-import { GET_CHARACTER } from "./action-type";
+import { CLEAN_CHARACTERS, GET_CHARACTER } from "./action-type";
 
 const initialState = {
      characters: [],
@@ -11,6 +11,11 @@ const rootReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     characters: action.payload
+                }
+            case CLEAN_CHARACTERS:
+                return {
+                    ...state,
+                    characters: []
                 }
 
             default:

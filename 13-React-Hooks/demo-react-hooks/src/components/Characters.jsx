@@ -1,4 +1,4 @@
-import { getCharacters } from '../redux/actions';
+import { getCharacters, cleanCharacters } from '../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -10,7 +10,8 @@ const Characters = () => { //como hago yo desde mi componente funcional para hac
 
     useEffect(() => { //quiero que cuando se monte el componente se despache una actions, como la despacho?
         dispatch(getCharacters()) //asi despaché una action
-    })
+        return () => dispatch(cleanCharacters()) //una buena manera de ahorrar memoria.Limpieza de estado(revisar componente actionsy reducer)
+    }, [])
 
     return (
         <div>

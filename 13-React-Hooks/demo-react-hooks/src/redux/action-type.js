@@ -1,1 +1,2 @@
 export const GET_CHARACTER = 'GET_CHARACTERS'; //to
+export const CLEAN_CHARACTERS = 'CLEAN_CHARACTERS;'

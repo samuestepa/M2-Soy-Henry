@@ -1,5 +1,5 @@
-import { GET_CHARACTER } from "./action-type"; //siempre se importan los types
-
+import { GET_CHARACTER, CLEAN_CHARACTERS } from "./action-type"; //siempre se importan los types
+//Middleware hace esta funcion, está implicito
 export const getCharacters = () => {
     return function(dispatch){ //siempre recibe por arte de magia a dispatch
         fetch('https://rickandmortyapi.com/api/character/') //se hace la peticion con fetch
@@ -8,3 +8,7 @@ export const getCharacters = () => {
     }
 }
 //data es objeto, results es propiedad de ese objeto
+
+export const cleanCharacters = () => {
+    return { type: CLEAN_CHARACTERS }
+}
