@@ -5,6 +5,7 @@ import { increment, decrement } from "../actions";
 class Counter extends Component {
   // Extra Credit
   incrementIfOdd = () => {
+    if()
     //Implementar una función de incremento que sólo aumenta si el valor del contador es impar
   };
   // Extra Credit

@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 count: state.count + 1
             }
-        case CAMBIAR:INSTRUCTOR:
+        case CAMBIAR_INSTRUCTOR:
             return {
                 ...state,
                 instructor: action.payLoad
